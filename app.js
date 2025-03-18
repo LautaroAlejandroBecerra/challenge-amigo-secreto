@@ -31,3 +31,15 @@ function leerLista(){
     //suma un nuevo nombre a la lista
 }
 
+function sortearAmigo() {
+    if (amigos == ''){
+        alert ('No hay amigos para sortear');
+        //el imput está vacio saldrá un aviso
+    } else {
+        let numeroGenerado = Math.floor(Math.random()*amigos.length);
+        //genera un numero, el limite es la cantidad de nombres que hay
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = amigos[numeroGenerado]
+        //el numero generado ubica el nombre en la lista y modifica la seccion de resultado para poner ese nombre que corresponde al numero aleatorio
+    }
+}
